@@ -23,18 +23,26 @@
     <div style="color:red"  th:if="${#fields.hasErrors('middleName')}" th:errors="*{middleName}">Middle name error</div>
     <br/>
 
-    <label for="date">Enter middle name: </label>
-    <input type="text" th:field="*{middleName}" id="date"/>
+    <label for="date">Enter date: </label>
+    <input type="text" th:field="*{date}" id="date"/>
     <div style="color:red"  th:if="${#fields.hasErrors('date')}" th:errors="*{date}">Date error</div>
     <br/>
 
+    <label for="gr">Enter group: </label>
+    <input type="text" th:field="*{gr}" id="gr"/>
+    <div style="color:red"  th:if="${#fields.hasErrors('gr')}" th:errors="*{gr}">Group error</div>
+    <br/>
 
+    <label for="id">Enter id: </label>
+    <input type="text" th:field="*{id}" id="id"/>
+    <div style="color:red"  th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Group error</div>
+    <br/>
 
     <br/>
     <input type="submit" value="Create"/>
     <br/>
     <br/>
-    <input type="button" value="Back" onclick="location.href='/people'"/>
+    <input type="button" value="Back" onclick="location.href='/students'"/>
 </div>
 </form>
 </body>

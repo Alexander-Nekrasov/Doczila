@@ -21,7 +21,7 @@ public class StudentsController {
         this.studentDAO = studentDAO;
     }
 
-    @GetMapping
+    @GetMapping()
     public String index(Model model){
         model.addAttribute("students", studentDAO.index());
         return "students/index";

@@ -19,13 +19,13 @@ public class StudentDAO {
 
     public List<Student> index(){
         return jdbcTemplate.query(
-                "SELECT * from student", new BeanPropertyRowMapper<Student>(Student.class));
+                "SELECT * from student", new StudentRowMapper());
     }
 
     public Student show(int id){
         return jdbcTemplate.query(
                 "SELECT * from student where id=?",
-                        new Object[]{id}, new BeanPropertyRowMapper<Student>(Student.class))
+                        new Object[]{id}, new StudentRowMapper())
                         .stream().findAny().orElse(null);
     }
 

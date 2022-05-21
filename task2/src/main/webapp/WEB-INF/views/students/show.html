@@ -2,12 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>The person</title>
+    <title>The student</title>
 </head>
 <body>
-<p th:text="${student.getId()}">VALUE</p>
+<p th:text="Group +': '+${student.getGr()}">VALUE</p>
 <p th:text="${student.getName()+' '+student.getSurname()}">VALUE</p>
 <p th:text="${student.getMiddleName()}">VALUE</p>
+<p th:text="${student.getDate()}">VALUE</p>
 
 <a th:href="@{/students/{id}/edit(id=${student.getId()})}">Edit</a>
 <br/>
