@@ -23,10 +23,7 @@ public class Student {
     @Past
     private Date date;
 
-    @NotEmpty(message = "Group should not be empty")
-    @Min(value = 1, message = "Enter a group from 1 to 10")
-    @Max(value = 10, message = "Enter a group from 1 to 10")
-    private int group;
+    private int gr;
 
     @Min(1)
     private int id;
@@ -34,12 +31,12 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, String surname, String middleName, Date date, int group, int id) {
+    public Student(String name, String surname, String middleName, Date date, int gr, int id) {
         this.name = name;
         this.surname = surname;
         this.middleName = middleName;
         this.date = date;
-        this.group = group;
+        this.gr = gr;
         this.id = id;
     }
 
@@ -75,12 +72,12 @@ public class Student {
         this.date = date;
     }
 
-    public int getGroup() {
-        return group;
+    public int getGr() {
+        return gr;
     }
 
-    public void setGroup(int group) {
-        this.group = group;
+    public void setGr(int gr) {
+        this.gr = gr;
     }
 
     public int getId() {
