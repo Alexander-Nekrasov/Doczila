@@ -10,9 +10,10 @@ import java.util.List;
 import java.util.Properties;
 
 public class Main {
+    private static Properties properties = new Properties();
+
     public static void main(String[] args) {
         List<File> fileList = new ArrayList<>();
-        Properties properties = new Properties();
 
         try {
             properties.load(new FileInputStream("src/main/resources/config.properties"));
@@ -42,7 +43,7 @@ public class Main {
                     if (file.isDirectory()) {
                         searchFile(file, fileList);
                     } else {
-                        if (file.getName().toLowerCase().endsWith(".txt")) {
+                        if (file.getName().toLowerCase().endsWith(properties.getProperty("formatFile"))) {
                             fileList.add(file);
                         }
                     }
